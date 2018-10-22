@@ -1,0 +1,37 @@
+{
+    "mode" : "file",
+    "menu" : [{
+        "name" : "Open",
+            "url" : "https://open"
+            },
+        {
+            "name" : "Save",
+            "url" : "https://save"
+        },
+             {
+            "name" : "Export",
+            "url" : "http://export",
+            "menu" : [
+                {
+                    "name" : "PDF",
+                    "url" : "to pdf maker"
+                },
+                {
+                    "name" : "Image",
+                    "url" : "to png or jpg!"
+                }, {
+                    "name" : "HTML",
+                    "url" : "to .html!"
+                }, {
+                    "name" : "Excel",
+                    "url" : "To xcl!"
+                }]
+            },
+            {
+                "name" : "Details",
+                "url" : "https//detials"
+            }
+
+        ]
+      
+}
