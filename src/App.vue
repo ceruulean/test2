@@ -2,38 +2,41 @@
   <div id="app">
 
    <div class="">
-    <Menu ref="Menu" Title="New Title" :mode='mode'></Menu>
+    <Menu ref="Menu" :mode='mode'></Menu>
     </div>
 
     <Schedule :mode='mode' :bFixTitleBar='this.menuBodyOpen' :rangeHours='this.rangeHours' :rangeDays='this.rangeDays' :timeDisplayConvention='this.timeDisplayConvention'></Schedule>
-
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Schedule from './Schedule_components/Schedule.vue'
 import Menu from './Menu_components/Menu.vue'
 
 export default {
-components: {HelloWorld,Schedule,Menu},
+components: {Schedule,Menu},
 name: 'app',
-  
+ready: function() {
+    window.addEventListener('resize', this.onResize());
+},
+
   methods: {
     eventModeChange: function (event) {
             this.mode = event;
   //    console.log("Mode changed to:" +string);
+    },
+
+    onResize: function () {
+
     }
   },
 
   data: function () {
       return {
-        rangeHours: [0, 23],
-        rangeDays:[0, 6],
-        rangeWeeks:[0, 0],
+        rangeHours: [0, 23], //  display ranging from 0 to 23
+        rangeDays:[0, 6], // display 0 is sunday, 6 is saturday
+        rangeWeeks:[0, 0], // display 1 week by default [0]
 
         Language: {type: String,
                 default: "English"
@@ -41,10 +44,11 @@ name: 'app',
         mode: {type: String,
                 default: 'file'
         },
-        timeDisplayConvention : {type: String,
-                default: '24' // military time
-        },
-              menuBodyOpen: false
+        timeDisplayConvention : 12,
+
+        menuBodyOpen: false,
+
+        ScheduleObject: Object,
       }
   },
 
@@ -71,6 +75,10 @@ created: function () {
             return true
           } else {return false}
         },
+  },
+
+  beforeDestroy: function() {
+    window.removeEventListener('resize', this.onResize())
   }
 }
 </script>

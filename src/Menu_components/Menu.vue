@@ -1,8 +1,8 @@
 <template>
 <div id="Menu" class="flex">
-<div class="tabclick" v-on:click="toggle('file')" v-bind:class="{'tabActive' : (this.mode == 'file')}"><Tab ref="0" bg-color="#89BDEB" mode="file"></Tab></div>
-<div class="tabclick" v-on:click="toggle('edit')" v-bind:class="{'tabActive' : (this.mode == 'edit')}"><Tab ref="1" bg-color="#3087D3" mode="edit"></Tab></div>
-<div class="tabclick" v-on:click="toggle('view')" v-bind:class="{'tabActive' : (this.mode == 'view')}"><Tab ref="2" bg-color="#2F597D" mode="view"></Tab></div>
+<div class="tabclick" v-on:click="toggle('file')" v-bind:class="{'tabActive' : (this.mode == 'file')}" alt="File"><Tab ref="0" bg-color="#89BDEB" mode="file"></Tab></div>
+<div class="tabclick" v-on:click="toggle('edit')" v-bind:class="{'tabActive' : (this.mode == 'edit')}" alt="Edit"><Tab ref="1" bg-color="#3087D3" mode="edit"></Tab></div>
+<div class="tabclick" v-on:click="toggle('view')" v-bind:class="{'tabActive' : (this.mode == 'view')}" alt="View"><Tab ref="2" bg-color="#2F597D" mode="view"></Tab></div>
 
 
 <MenuBody bg-color="#89BDEB" mode="file" v-bind:class="{'menuBodyTop': (menuBodyOpen && mode == 'file'), 'menuBodyHidden': (!menuBodyOpen)}"></MenuBody>
@@ -74,6 +74,7 @@ z-index:10;
 }
 .tabclick{
     padding:15px 0 15px 15px;
+    z-index:11;
 }
 .tabActive{
     transform:scale(1.2);

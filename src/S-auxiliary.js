@@ -22,20 +22,22 @@ function getDayName(int) {
     }
 }
 
-function hourTickerDecimal(num) { // return a pretty string that shows the time. 1.5 = 1:30, etc.
-  var conv = this.timeDisplayConvention;
+function hourTickerDecimal(num, conv) { // return a pretty string that shows the time. 1.5 = 1:30, etc.
+  //conv is time display convention
   var hour = Math.floor(num);
-  var decimalToMinutes = (num - hour) * 60;
+  var decimalToMinutes = Math.round((num - hour) * 60); // get nearest integer minute
+  var mm
+if (decimalToMinutes == 0) {mm = "0"} // for string display
 
     if (conv == '12') {
-      var mm = (hour < 12)? 'a.m.':'p.m.';
+      mm = (hour < 12)? mm+=' a.m.':mm+=' p.m.';
       (hour%12 == 0)? hour = 12: hour = hour%12;
-      return hour+":"+decimalToMinutes+" "+mm
+      return hour+":"+decimalToMinutes+mm
 
     } else if (conv == '24') {
-        return (hour%24)+":"+decimalToMinutes
+        return (hour%24)+":"+decimalToMinutes+mm
     } else {
-      return hour+":"+decimalToMinutes
+      return hour+":"+decimalToMinutes+mm
     }
 }
 

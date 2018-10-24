@@ -10,6 +10,7 @@
 export default {
   name: 'Tab',
   props: {
+      Title: String,
       mode: String,
       bgColor: String,
       iconpath: String

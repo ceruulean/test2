@@ -1,7 +1,6 @@
 <template>
 <div class="hour" ref="hour">
 <div ref="fill" :style="fillStyle">
-    hour test
 </div>
 </div>
 </template>
@@ -49,6 +48,7 @@ compute: {
 <style>
 
 .hour{
+    border:1px solid green;
     height:1em;
 }
 </style>

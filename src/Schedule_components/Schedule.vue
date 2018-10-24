@@ -8,14 +8,14 @@
 
 <div class="SchedBody">
 
-  <div class="time-labels">
-   <div v-for="(h, key, index) in this.myHours" :key="index">
-     <strong>dddd</strong>
+  <div class="time-labels"> <!-- only render hours if within display Range -->
+   <div v-for="(h, index) in this.myHours" :key="index" v-if="(h >= rangeHours[0] && h <= rangeHours[1])">
+     <strong>{{hourTickerDecimal(h)}}</strong>
     </div>
   </div>
 
-<div ref="day-wrapper" v-if="(myDays.length >= 0)">
-  <Day v-for="(d, key, index) in this.myDays" :key="key" :name="d.name" :Hours="this.myHours"></Day>
+<div id="days-body-wrapper" ref="Wrapper" v-if="(myDays.length >= 0)">
+  <Day v-for="(d, key) in this.myDays" :key="key" :name="d.name" :rangeHours="rangeHours"></Day>
 </div>
 </div>
 
@@ -25,7 +25,7 @@
 <script>
 import Day from "./Day.vue"
 import Hour from "./Hour.vue"
-import * as aux from "./S-auxiliary.js"
+import * as aux from "@/S-auxiliary.js"
 
 export default {
 components: {Day, Hour},
@@ -41,10 +41,13 @@ components: {Day, Hour},
 
 created: function () {
   this.myDays = this.newDays();
+
 },
 
-mount : function() {
-//$refs.day-wrapper.$mount(#Day);
+mounted : function() {
+
+this.width = this.$refs.Wrapper.getBoundingClientRect().width;
+this.$emit('on-schedule-width', this.width)
 },
 
   methods : {
@@ -69,6 +72,11 @@ mount : function() {
   //  this.myDays = temp;
        return temp;
     },
+
+    hourTickerDecimal: function(num) {
+    //  alert(this.timeDisplayConvention);
+      return aux.hourTickerDecimal(num, this.timeDisplayConvention);
+    }
   },
 
  computed: {
@@ -77,13 +85,13 @@ mount : function() {
       },
       myDays: function() {
           return this.newDays();
-      }
+      },
   },
 
   data : function () {
     return {
       Title: "New Title",
-
+      width: {type: Number}
   }
 }
 }
@@ -95,6 +103,7 @@ mount : function() {
 <style>
 #Schedule {
 display:flex;
+z-index:3;
 }
 .SchedBody{
 min-width:50%;
@@ -134,5 +143,9 @@ position: fixed;
 
 .SchedBody {    
     margin-top:6em;
+}
+
+#days-body-wrapper{
+  display:inline-block;
 }
 </style>
