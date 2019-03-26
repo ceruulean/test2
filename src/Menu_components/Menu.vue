@@ -34,7 +34,7 @@ components: {Tab,MenuBody},
             if (toMode == this.mode){ //toggle menu if mode is same
                 this.menuBodyOpen = !this.menuBodyOpen;
             } else { // go to new mode and open the menu
-                this.mode = toMode;
+                //this.mode = toMode;
                 this.menuBodyOpen = true;
                 this.$root.$emit('on-mode-change', toMode); // let the App know the mode changed
             }

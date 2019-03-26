@@ -1,0 +1,161 @@
+{
+"UTC": [
+{
+    "label": "",
+    "value": ""
+},
+{
+    "label": "UTC -12:00",
+    "value": "-12:00"        
+},
+{
+    "label": "UTC -11:00",
+    "value": "-11:00"       
+},
+{
+    "label": "UTC -10:00",
+    "value": "-10:00" 
+},
+{
+    "label": "UTC -09:30",
+    "value": "-9:30"
+},
+{
+    "label": "UTC -09:00",
+    "value": "-9:00"
+},
+{
+    "label": "UTC -08:00",
+    "value": "-8:00"
+},
+{
+    "label": "UTC -07:00",
+    "value": "-7:00"
+},
+{
+    "label": "UTC -06:00",
+    "value": "-6:00"
+},
+{
+    "label": "UTC -05:00",
+    "value": "-5:00"
+},
+{
+    "label": "UTC -04:00",
+    "value": "-4:00"
+},
+{
+    "label": "UTC -03:30",
+    "value": "-3:30"
+},
+{
+    "label": "UTC -03:00",
+    "value": "-3:00"
+},
+{
+    "label": "UTC -02:00",
+    "value": "-2:00"
+},
+{
+    "label": "UTC -01:00",
+    "value": "-1:00"
+},
+{
+    "label": "UTC 00:00",
+    "value": "+0:00"
+},
+{
+    "label": "UTC +01:00",
+    "value": "+1:00"
+},
+{
+    "label": "UTC +02:00",
+    "value": "+2:00"
+},
+{
+    "label": "UTC +03:00",
+    "value": "+3:00"
+},
+{
+    "label": "UTC +03:30",
+    "value": "+3:30"
+},
+{
+    "label": "UTC +04:00",
+    "value": "+4:00"
+},
+{
+    "label": "UTC +04:30",
+    "value": "+4:30"
+},
+{
+    "label": "UTC +05:00",
+    "value": "+5:00"
+},
+{
+    "label": "UTC +05:30",
+    "value": "+5:30"
+},
+{
+    "label": "UTC +05:45",
+    "value": "+5:45"
+},
+{
+    "label": "UTC +06:00",
+    "value": "+6:00"
+},
+{
+    "label": "UTC +06:30",
+    "value": "+6:30"
+},
+{
+    "label": "UTC +07:00",
+    "value": "+7:00"
+},
+{
+    "label": "UTC +08:00",
+    "value": "+8:00"
+},
+{
+    "label": "UTC +08:45",
+    "value": "+8:45"
+},
+{
+    "label": "UTC +09:00",
+    "value": "+9:00"
+},
+{
+    "label": "UTC +09:30",
+    "value": "+9:30"
+},
+{
+    "label": "UTC +10:00",
+    "value": "+10:00"
+},
+{
+    "label": "UTC +10:30",
+    "value": "+10:30"
+},
+{
+    "label": "UTC +11:00",
+    "value": "+11:00"
+},
+{
+    "label": "UTC +12:00",
+    "value": "+12:00"
+},
+{
+    "label": "UTC +12:45",
+    "value": "+12:45"
+},
+{
+    "label": "UTC +13:00",
+    "value": "+13:00"
+},
+{
+    "label": "UTC +14:00",
+    "value": "+14:00"
+}
+]
+
+}

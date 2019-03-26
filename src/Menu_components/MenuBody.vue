@@ -3,11 +3,15 @@
     <ul v-for="link in ListLinks" v-bind:key="link">
         <li><a :href="link.url">{{ link.name }}</a></li>
     </ul>
+
+    <timezoneSelect v-if="(mode == 'view')"/>
 </div>
 </template>
 
 <script>
-export default {
+import timezoneSelect from '../components/timezone_select.vue'
+
+export default {components:{timezoneSelect},
   name: 'MenuBody',
   props: {
       mode: String,
@@ -21,7 +25,7 @@ export default {
         ListLinks: function() {
             var myList = [];
             if (this.mode == "file") {
-                myList[0] = {name:"Open", url: "http://"};
+                myList[0] = "Open";
                 myList[1] = "Save";
                 myList[2] = "-";
                 myList[3] = "Export";
@@ -90,7 +94,13 @@ export default {
     data: function () {
         return {
             isTopLevel: Boolean,
-            LinkList: Object
+            LinkList: Object,
+
+            fileList: [{
+                name: 'Open',
+                method: function() {},         
+            }],
+
         }
     }
 }

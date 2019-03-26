@@ -1,0 +1,41 @@
+{
+    "mode" : "view",
+    "menu" : [{
+        "name" : "Timezone",
+            "function" : "https://open"
+            },
+        {
+            "name" : "Display Style",
+            "function" : "https://save"
+        },
+             {
+            "name" : "Time Range",
+            "function" : "http://export",
+            "menu" : [
+                {
+                    "name" : "PDF",
+                    "function" : "to pdf maker"
+                },
+                {
+                    "name" : "Image",
+                    "function" : "to png or jpg!"
+                }, {
+                    "name" : "HTML",
+                    "function" : "to .html!"
+                }, {
+                    "name" : "Excel",
+                    "function" : "To xcl!"
+                }]
+            },
+            {
+                "name" : "Language",
+                "function" : "https//detials"
+            },
+            {
+                "name" : "Help",
+                "function" : "https//detials"
+            }
+
+        ]
+      
+}

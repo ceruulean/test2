@@ -3,6 +3,14 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$localStoreSetObject = function(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+Vue.prototype.$localStoreGetObject = function(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
 new Vue({
   render: h => h(App)
 }).$mount('#app')

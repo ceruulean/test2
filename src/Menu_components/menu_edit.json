@@ -1,0 +1,29 @@
+{
+    "mode": "edit",
+    "content" : [
+        {
+            "object" : "Pallette",
+            "function" : "function() {console.log('im a pallette')}"
+        },
+        {
+        "name" : "Open",
+            "function" : "https://open"
+            },
+        {
+            "name" : "Eraser",
+            "function" : "https://save"
+        },
+             {
+            "name" : "Add Note",
+            "function" : "http://export"
+            },
+            {
+                "name" : "Properties",
+                "function" : "https//detials"
+            },
+            {
+                "name" : "Clear All",
+                "function" : "https//detials"
+            }
+        ]  
+}

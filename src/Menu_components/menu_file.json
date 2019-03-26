@@ -2,34 +2,34 @@
     "mode" : "file",
     "menu" : [{
         "name" : "Open",
-            "url" : "https://open"
+            "function" : "https://open"
             },
         {
             "name" : "Save",
-            "url" : "https://save"
+            "function" : "https://save"
         },
              {
             "name" : "Export",
-            "url" : "http://export",
+            "function" : "http://export",
             "menu" : [
                 {
                     "name" : "PDF",
-                    "url" : "to pdf maker"
+                    "function" : "to pdf maker"
                 },
                 {
                     "name" : "Image",
-                    "url" : "to png or jpg!"
+                    "function" : "to png or jpg!"
                 }, {
                     "name" : "HTML",
-                    "url" : "to .html!"
+                    "function" : "to .html!"
                 }, {
                     "name" : "Excel",
-                    "url" : "To xcl!"
+                    "function" : "To xcl!"
                 }]
             },
             {
                 "name" : "Details",
-                "url" : "https//detials"
+                "function" : "https//detials"
             }
 
         ]
